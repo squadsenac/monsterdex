@@ -1,0 +1,19 @@
+{
+  "name": "monsterdex",
+  "version": "1.0.0",
+  "description": "catalogo de monstros para DM´s",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/squadsenac/monsterdex.git"
+  },
+  "author": "Fábio Cabral ADS SENAC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/squadsenac/monsterdex/issues"
+  },
+  "homepage": "https://github.com/squadsenac/monsterdex#readme"
+}
