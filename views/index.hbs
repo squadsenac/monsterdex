@@ -15,29 +15,33 @@
     <button type="button" class="edit" id="edit">EDITAR</button>
     <button type="button" class="del" id="del">EXCLUIR</button>
 </div>
-
-<div class="monsterblock">   
-    <table class="monsters-table">
-        <tr class="att-title">
-            <td class="att">Nome:</td>
-        </tr>
-        <tr>
-            <td class="fill-in">Lagarto</td>
-        </tr>
-        <tr class="att-title">
-            <td class="att">Tipo:</td>
-        </tr>
-        <tr>
-            <td class="fill-in">Lagarto</td>
-        </tr>
-        <tr class="att-title">
-            <td class="att">Tipo de ataque/dano:</td>
-        </tr>
-        <tr>
-            <td class="fill-in">Lagarto</td>
-        </tr>
-    </table>
-</div>
-
+{{#if monster}}
+    {{#each monster}}
+        <div class="monsterblock">   
+            <table class="monsters-table">
+                <tr class="att-title">
+                    <td class="att">Nome:</td>
+                </tr>
+                <tr>
+                    <td class="fill-in">{{this.nome}}</td>
+                </tr>
+                <tr class="att-title">
+                    <td class="att">Tipo:</td>
+                </tr>
+                <tr>
+                    <td class="fill-in">{{this.tipo}}</td>
+                </tr>
+                <tr class="att-title">
+                    <td class="att">Tipo de ataque/dano:</td>
+                </tr>
+                <tr>
+                    <td class="fill-in">{{this.tipoataque}}</td>
+                </tr>
+            </table>
+        </div>
+    {{/each}}
+{{else}}
+    <p class="aviso">Não há monstros cadastrados nesse banco de dados.</p>
+{{/if}}
 </body>
 </html>

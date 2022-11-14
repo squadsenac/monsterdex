@@ -1,11 +1,13 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const monstroSchema = new Schema({
+const monstro = new Schema({
     nome: String,
     tipo: String,
-    tipoataque: String
+    tipoataque: String,
+}, {
+    collection: "monstro"
 });
 
 
-module.exports = mongoose.model("monstro", monstroSchema);
+module.exports = mongoose.model("monstro", monstro);

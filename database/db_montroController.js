@@ -1,8 +1,8 @@
-const monstroService = require("./db_services.js");
+const monstroService = require("./db_services");
 
 exports.pegarMonstros = async (req, res) => {
     try {
-      const monstros = await monstroService.pegarMonstros();
+      const monstros = await monstroService.pegarTodos();
       res.json({ data: monstros, status: "success" });
     } catch (err) {
       res.status(500).json({ error: err.message });
@@ -11,7 +11,7 @@ exports.pegarMonstros = async (req, res) => {
 
   exports.criarMonstro = async (req, res) => {
     try {
-      const monstro = await monstroService.criarMonstro();
+      const monstro = await monstroService.criarMonstro(req.body);
       res.json({ data: monstro, status: "success" });
     } catch (err) {
       res.status(500).json({ error: err.message });
@@ -20,7 +20,7 @@ exports.pegarMonstros = async (req, res) => {
 
   exports.pegarPorID = async (req, res) => {
     try {
-      const monstro = await monstroService.pegarPorID();
+      const monstro = await monstroService.pegarPorID(req.params.id);
       res.json({ data: monstro, status: "success" });
     } catch (err) {
       res.status(500).json({ error: err.message });
@@ -29,7 +29,7 @@ exports.pegarMonstros = async (req, res) => {
 
   exports.atualizarMonstro = async (req, res) => {
     try {
-      const monstro = await monstroService.atualizarMonstro();
+      const monstro = await monstroService.atualizarMonstro(req.params.id, req.body);
       res.json({ data: monstro, status: "success" });
     } catch (err) {
       res.status(500).json({ error: err.message });
@@ -38,7 +38,7 @@ exports.pegarMonstros = async (req, res) => {
 
   exports.deletarMonstro = async (req, res) => {
     try {
-      const monstro = await monstroService.deletarMonstro();
+      const monstro = await monstroService.deletarMonstro(req.params.id);
       res.json({ data: monstro, status: "success" });
     } catch (err) {
       res.status(500).json({ error: err.message });

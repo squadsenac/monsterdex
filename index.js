@@ -7,6 +7,7 @@ main().catch(err => console.log(err));
 
 async function main(){
    await mongoose.connect('mongodb://localhost:27017/monstros');
+   console.log("Conectado ao banco de dados monstros");
 }
 
 
