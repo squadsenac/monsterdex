@@ -4,7 +4,8 @@
   "description": "catalogo de monstros para DM´s",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/squadsenac/monsterdex/issues"
   },
-  "homepage": "https://github.com/squadsenac/monsterdex#readme"
+  "homepage": "https://github.com/squadsenac/monsterdex#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "nodemon": "^2.0.20"
+  }
 }
