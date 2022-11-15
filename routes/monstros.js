@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const {
    pegarMonstros,
+   pegarMonstrosFront,
    criarMonstro,
    pegarPorID,
    atualizarMonstro,
@@ -9,8 +10,7 @@ const {
 }= require("../database/db_montroController");
 
 router.get("/index", (req, res, next) => {
-   let monstros = pegarMonstros;
-   res.render("index", {monstro: monstros});
+   res.render("index", { monstro: pegarMonstros });
 });
 
 router.route("/").get(pegarMonstros).post(criarMonstro);

@@ -15,33 +15,31 @@
     <button type="button" class="edit" id="edit">EDITAR</button>
     <button type="button" class="del" id="del">EXCLUIR</button>
 </div>
-{{#if monster}}
-    {{#each monster}}
+
+    {{#each monstro}}
         <div class="monsterblock">   
             <table class="monsters-table">
                 <tr class="att-title">
                     <td class="att">Nome:</td>
                 </tr>
                 <tr>
-                    <td class="fill-in">{{this.nome}}</td>
+                    <td class="fill-in">{{this.data.nome}}</td>
                 </tr>
                 <tr class="att-title">
                     <td class="att">Tipo:</td>
                 </tr>
                 <tr>
-                    <td class="fill-in">{{this.tipo}}</td>
+                    <td class="fill-in">{{this.data.tipo}}</td>
                 </tr>
                 <tr class="att-title">
                     <td class="att">Tipo de ataque/dano:</td>
                 </tr>
                 <tr>
-                    <td class="fill-in">{{this.tipoataque}}</td>
+                    <td class="fill-in">{{this.data.tipoataque}}</td>
                 </tr>
             </table>
         </div>
     {{/each}}
-{{else}}
-    <p class="aviso">Não há monstros cadastrados nesse banco de dados.</p>
-{{/if}}
+
 </body>
 </html>
